@@ -1,2 +1,4 @@
-MainClass.class
-MyMQRouteBuilder.class
+it\aubay\camel\SomebodyBeanProcessor.class
+it\aubay\camel\SomebodyBean.class
+it\aubay\camel\MainClass.class
+it\aubay\camel\MyMQRouteBuilder.class

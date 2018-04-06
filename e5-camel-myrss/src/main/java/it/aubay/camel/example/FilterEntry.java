@@ -9,6 +9,6 @@ public class FilterEntry {
 	public boolean filter(SyndFeed feed) {
 		SyndEntry firstentry = (SyndEntry) feed.getEntries().get(0);
 		String title = firstentry.getTitle();
-		return title.toLowerCase().startsWith("i");
+		return title.toLowerCase().contains("un");
 	}
 }
