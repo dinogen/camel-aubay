@@ -4,7 +4,9 @@ import java.time.LocalDate;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class SomebodyBeanProcessor implements Processor {
 
 	public void process(Exchange arg0) throws Exception {

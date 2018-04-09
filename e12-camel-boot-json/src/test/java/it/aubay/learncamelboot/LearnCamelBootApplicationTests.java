@@ -1,7 +1,5 @@
 package it.aubay.learncamelboot;
 
-import org.apache.activemq.camel.component.ActiveMQComponent;
-import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.test.spring.CamelSpringBootRunner;
 import org.junit.Test;
@@ -20,11 +18,11 @@ public class LearnCamelBootApplicationTests {
 	
 	@Test
 	public void testJson() throws InterruptedException {
-		template.sendBody("activemq:test.queue", "{\"nome\": \"Marcello Semboli\",\"dtnascita\": 19660409}");
+		template.sendBody("activemq:{{coda}}", "{\"nome\": \"Marcello Semboli\",\"dtnascita\": 19660409}");
 		Thread.sleep(2000);
-		template.sendBody("activemq:test.queue", "{\"nome\": \"Larry Page\",\"dtnascita\": 19730329}");
+		template.sendBody("activemq:{{coda}}", "{\"nome\": \"Larry Page\",\"dtnascita\": 19730329}");
 		Thread.sleep(2000);
-		template.sendBody("activemq:test.queue", "{\"nome\": \"Mahatma Gandhi\",\"dtnascita\": 18691002}");
+		template.sendBody("activemq:{{coda}}", "{\"nome\": \"Mahatma Gandhi\",\"dtnascita\": 18691002}");
 		Thread.sleep(2000);
 
 	}
